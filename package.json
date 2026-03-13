@@ -5,7 +5,8 @@
   "main": "service/index.ts",
   "scripts": {
     "start": "bun run service/index.ts",
-    "dev": "bun --watch service/index.ts"
+    "dev": "bun --watch service/index.ts",
+    "security:check": "bun run scripts/security/check_no_cogdx_exfiltration.ts"
   },
   "dependencies": {},
   "devDependencies": {

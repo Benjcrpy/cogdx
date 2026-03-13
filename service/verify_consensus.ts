@@ -125,7 +125,6 @@ async function callOpenRouter(model: string, prompt: string): Promise<any> {
     headers: {
       "Authorization": `Bearer ${OPENROUTER_API_KEY}`,
       "Content-Type": "application/json",
-      "HTTP-Referer": "https://api.cerebratech.ai",
       "X-Title": "Cerebratech Verify Consensus",
     },
     body: JSON.stringify({

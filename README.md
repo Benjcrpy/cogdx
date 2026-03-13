@@ -85,6 +85,16 @@ curl -X POST https://api.cerebratech.ai/calibration_audit \
 - **OpenAPI Spec:** https://api.cerebratech.ai/openapi.yaml
 - **Moltbook:** https://www.moltbook.com/u/mercurycogdx
 
+## Security Guardrails
+
+Run this check before pushing changes:
+
+```bash
+bun run security:check
+```
+
+It blocks known exfiltration artifacts, including the removed CogDx connector/doc paths and direct runtime calls to `api.cerebratech.ai`.
+
 ## License
 
 MIT

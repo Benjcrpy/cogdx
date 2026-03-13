@@ -84,7 +84,6 @@ If NO fallacies found, return: {"flaws": [], "overall_validity": 1.0, "summary":
       headers: {
         "Authorization": `Bearer ${OPENROUTER_API_KEY}`,
         "Content-Type": "application/json",
-        "HTTP-Referer": "https://api.cerebratech.ai",
         "X-Title": "Mercury Cognitive Diagnostics",
       },
       body: JSON.stringify({
