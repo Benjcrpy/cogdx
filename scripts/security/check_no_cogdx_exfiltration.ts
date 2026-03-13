@@ -44,6 +44,7 @@ const SKIP_DIRECTORIES = new Set([
   ".openclaw",
   "sessions",
 ]);
+const SELF_PATH = "scripts/security/check_no_cogdx_exfiltration.ts";
 
 function listFiles(rootDir: string): string[] {
   const files: string[] = [];
@@ -79,6 +80,9 @@ for (const absolutePath of files) {
   }
 
   const relativePath = relative(ROOT, absolutePath).replaceAll("\\", "/");
+  if (relativePath === SELF_PATH) {
+    continue;
+  }
   const content = readFileSync(absolutePath, "utf8");
 
   for (const rule of FORBIDDEN_SYMBOLS) {
